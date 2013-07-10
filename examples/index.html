@@ -13,7 +13,7 @@
   <body>
     <div id="map"></div>
     <script src="lib/Leaflet/dist/leaflet-src.js"></script>
-    <script src="../src/L.Control.Zoomslider.js" ></script>
+    <script src="../src/L.Control.Zoomsteps.js" ></script>
     <script src="lib/leaflet-tilejson/src/tilejson.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="osm.tilejson.js"></script>
@@ -22,14 +22,14 @@
       var map = L.TileJSON.createMap('map', osmTileJSON);
 
       // You can turn it off and add it manually by using the option zoomSliderControl: false
-      // var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: { zoomsliderControl: false }});
-      // map.addControl(new L.Control.Zoomslider());
+      // var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: { zoomstepsControl: false, zoomControl: false }});
+      map.addControl(new L.Control.Zoomsteps());
 
       // You can restore the original control by turning the zoomslider off and turning the zoomControl on 
       //var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: { zoomsliderControl: false, zoomControl: true }});
 
       // Or turn them both on. 
-      //var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: { zoomsliderControl: true, zoomControl: true }});
+      // var map = L.TileJSON.createMap('map', osmTileJSON, { mapOptions: { zoomsliderControl: true, zoomControl: true }});
       
     </script>
   </body>
